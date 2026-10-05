@@ -1,0 +1,55 @@
+# ==============================================================================
+# MotifWeave: Experiment A - Baseline Embedding Model Configuration
+# ==============================================================================
+
+experiment_name: "baseline_convnext_tiny"
+description: "Baseline metric-learning model trained with standard ImageNet augmentations (no color-invariant transforms)"
+
+# Reproducibility
+seed: 42
+
+# Data and Paths
+train_csv: "data/processed/splits/train.csv"
+val_csv: "data/processed/splits/val.csv"
+test_csv: "data/processed/splits/test.csv"
+checkpoint_dir: "outputs/checkpoints"
+log_dir: "outputs/metrics"
+figures_dir: "outputs/figures"
+
+# Model Architecture
+backbone: "convnext_tiny"
+pretrained: true
+weights_name: "ConvNeXt_Tiny_Weights.IMAGENET1K_V1"
+freeze_backbone: "full"        # 'full' freezes ConvNeXt features, trains GeM + Projection Head
+pooling: "gem"                 # 'gem' or 'avg'
+gem_p: 3.0
+head_type: "mlp"               # 'mlp' or 'linear'
+dropout: 0.1
+embedding_dim: 256
+l2_normalize: true
+
+# Preprocessing & Augmentation
+image_size: 224
+augmentation: "standard_imagenet" # resize, random resized crop, horizontal flip
+
+# Batch Sampling (Source-Aware P x K)
+p_sources: 8                   # Number of distinct source IDs per batch
+k_variants: 4                  # Number of variants per source ID per batch
+batch_size: 32                 # Total batch size = P * K
+
+# Metric Learning Objective
+loss: "supervised_contrastive"
+temperature: 0.07
+
+# Optimization
+optimizer: "adamw"
+learning_rate: 0.0005
+weight_decay: 0.0001
+epochs: 5
+scheduler: "cosine"
+min_lr: 0.000005
+num_workers: 0
+
+# Checkpointing & Validation
+save_best_metric: "val_loss"
+early_stopping_patience: 5

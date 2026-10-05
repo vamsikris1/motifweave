@@ -1,0 +1,1616 @@
+{
+  "benchmark_info": {
+    "gallery_count": 25,
+    "query_count": 75,
+    "ground_truth": "query source_id == gallery source_id",
+    "metric_label": "unseen controlled source-identity retrieval metrics"
+  },
+  "experiment_a_baseline": {
+    "checkpoint": "baseline_best.pth",
+    "num_queries": 75,
+    "num_gallery": 25,
+    "Recall@1": 94.66666666666667,
+    "Recall@5": 100.0,
+    "Recall@10": 100.0,
+    "mAP": 97.33333333333334,
+    "pairwise_stats": {
+      "positive_similarity": {
+        "mean": 0.8828102405865987,
+        "std": 0.05842943353350997,
+        "min": 0.6940490007400513,
+        "median": 0.8869914412498474,
+        "max": 0.97994464635849
+      },
+      "negative_similarity": {
+        "mean": 0.3057882043903616,
+        "std": 0.21428285691062893,
+        "min": -0.33438968658447266,
+        "median": 0.30316436290740967,
+        "max": 0.9205692410469055
+      },
+      "similarity_margin": 0.5770220361962372
+    },
+    "transform_breakdown": {
+      "Antique_Amber_Terracotta": {
+        "count": 25,
+        "Recall@1": 96.0,
+        "Recall@5": 100.0,
+        "mAP": 98.0,
+        "mean_pos_sim": 0.9047728276252747,
+        "min_pos_sim": 0.7858032584190369
+      },
+      "Royal_Indigo_Complementary": {
+        "count": 25,
+        "Recall@1": 96.0,
+        "Recall@5": 100.0,
+        "mAP": 98.0,
+        "mean_pos_sim": 0.8723822355270385,
+        "min_pos_sim": 0.7522751092910767
+      },
+      "Sage_Mint_Teal": {
+        "count": 25,
+        "Recall@1": 92.0,
+        "Recall@5": 100.0,
+        "mAP": 96.0,
+        "mean_pos_sim": 0.8712756586074829,
+        "min_pos_sim": 0.6940490007400513
+      }
+    },
+    "per_query_results": [
+      {
+        "query_idx": 0,
+        "source_id": "deeplure_006",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9488374590873718,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 1,
+        "source_id": "deeplure_006",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9439975619316101,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 2,
+        "source_id": "deeplure_006",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.97994464635849,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 3,
+        "source_id": "deeplure_008",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9106807708740234,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 4,
+        "source_id": "deeplure_008",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9201790690422058,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 5,
+        "source_id": "deeplure_008",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9287648797035217,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 6,
+        "source_id": "deeplure_009",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8035008907318115,
+        "rank": 2,
+        "top1_match": false,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 7,
+        "source_id": "deeplure_009",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8272547125816345,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 8,
+        "source_id": "deeplure_009",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.842407763004303,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 9,
+        "source_id": "deeplure_014",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9189750552177429,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 10,
+        "source_id": "deeplure_014",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9713072180747986,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 11,
+        "source_id": "deeplure_014",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9509842395782471,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 12,
+        "source_id": "deeplure_035",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8076227307319641,
+        "rank": 2,
+        "top1_match": false,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 13,
+        "source_id": "deeplure_035",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8304210901260376,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 14,
+        "source_id": "deeplure_035",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8365463614463806,
+        "rank": 2,
+        "top1_match": false,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 15,
+        "source_id": "deeplure_036",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9150527119636536,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 16,
+        "source_id": "deeplure_036",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.924100399017334,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 17,
+        "source_id": "deeplure_036",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9432883858680725,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 18,
+        "source_id": "deeplure_044",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9219399094581604,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 19,
+        "source_id": "deeplure_044",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.7909616231918335,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 20,
+        "source_id": "deeplure_044",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8796752095222473,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 21,
+        "source_id": "deeplure_047",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9354062080383301,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 22,
+        "source_id": "deeplure_047",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9480323791503906,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 23,
+        "source_id": "deeplure_047",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9408453106880188,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 24,
+        "source_id": "deeplure_050",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8496473431587219,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 25,
+        "source_id": "deeplure_050",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8163678050041199,
+        "rank": 2,
+        "top1_match": false,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 26,
+        "source_id": "deeplure_050",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8519198298454285,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 27,
+        "source_id": "deeplure_054",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8151258230209351,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 28,
+        "source_id": "deeplure_054",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.7628134489059448,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 29,
+        "source_id": "deeplure_054",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.860805094242096,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 30,
+        "source_id": "deeplure_071",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8692730069160461,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 31,
+        "source_id": "deeplure_071",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8401501178741455,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 32,
+        "source_id": "deeplure_071",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8869914412498474,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 33,
+        "source_id": "deeplure_078",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.6940490007400513,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 34,
+        "source_id": "deeplure_078",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.7522751092910767,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 35,
+        "source_id": "deeplure_078",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8316723704338074,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 36,
+        "source_id": "deeplure_081",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9294371604919434,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 37,
+        "source_id": "deeplure_081",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8805614709854126,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 38,
+        "source_id": "deeplure_081",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9375813603401184,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 39,
+        "source_id": "deeplure_084",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8223414421081543,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 40,
+        "source_id": "deeplure_084",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8395454287528992,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 41,
+        "source_id": "deeplure_084",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.7858032584190369,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 42,
+        "source_id": "deeplure_090",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8640903234481812,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 43,
+        "source_id": "deeplure_090",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8738760352134705,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 44,
+        "source_id": "deeplure_090",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9467384815216064,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 45,
+        "source_id": "deeplure_092",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9597567319869995,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 46,
+        "source_id": "deeplure_092",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9092914462089539,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 47,
+        "source_id": "deeplure_092",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8512606024742126,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 48,
+        "source_id": "deeplure_111",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9012283682823181,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 49,
+        "source_id": "deeplure_111",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9118166565895081,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 50,
+        "source_id": "deeplure_111",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9525316953659058,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 51,
+        "source_id": "deeplure_114",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8459503054618835,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 52,
+        "source_id": "deeplure_114",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.877413809299469,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 53,
+        "source_id": "deeplure_114",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9071250557899475,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 54,
+        "source_id": "deeplure_119",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8508579730987549,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 55,
+        "source_id": "deeplure_119",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8738731741905212,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 56,
+        "source_id": "deeplure_119",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9386951923370361,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 57,
+        "source_id": "deeplure_126",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8890184760093689,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 58,
+        "source_id": "deeplure_126",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8948004245758057,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 59,
+        "source_id": "deeplure_126",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9017704129219055,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 60,
+        "source_id": "deeplure_128",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8579390645027161,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 61,
+        "source_id": "deeplure_128",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.890022873878479,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 62,
+        "source_id": "deeplure_128",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9387023448944092,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 63,
+        "source_id": "deeplure_148",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8598819375038147,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 64,
+        "source_id": "deeplure_148",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8594730496406555,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 65,
+        "source_id": "deeplure_148",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8773776292800903,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 66,
+        "source_id": "deeplure_149",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.810638427734375,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 67,
+        "source_id": "deeplure_149",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.7948189973831177,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 68,
+        "source_id": "deeplure_149",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9176401495933533,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 69,
+        "source_id": "deeplure_153",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8546571135520935,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 70,
+        "source_id": "deeplure_153",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9303367137908936,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 71,
+        "source_id": "deeplure_153",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9755829572677612,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 72,
+        "source_id": "deeplure_158",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9459832310676575,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 73,
+        "source_id": "deeplure_158",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.945865273475647,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 74,
+        "source_id": "deeplure_158",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.954666018486023,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      }
+    ]
+  },
+  "experiment_b_color_invariant": {
+    "checkpoint": "color_invariant_best.pth",
+    "num_queries": 75,
+    "num_gallery": 25,
+    "Recall@1": 94.66666666666667,
+    "Recall@5": 100.0,
+    "Recall@10": 100.0,
+    "mAP": 97.33333333333334,
+    "pairwise_stats": {
+      "positive_similarity": {
+        "mean": 0.8920699961980184,
+        "std": 0.05822376201451603,
+        "min": 0.7245699167251587,
+        "median": 0.899526834487915,
+        "max": 0.9860407114028931
+      },
+      "negative_similarity": {
+        "mean": 0.33092585379814005,
+        "std": 0.2209389441418424,
+        "min": -0.28504621982574463,
+        "median": 0.3211545795202255,
+        "max": 0.9321008920669556
+      },
+      "similarity_margin": 0.5611441423998784
+    },
+    "transform_breakdown": {
+      "Antique_Amber_Terracotta": {
+        "count": 25,
+        "Recall@1": 92.0,
+        "Recall@5": 100.0,
+        "mAP": 96.0,
+        "mean_pos_sim": 0.9127976560592651,
+        "min_pos_sim": 0.7825520634651184
+      },
+      "Royal_Indigo_Complementary": {
+        "count": 25,
+        "Recall@1": 96.0,
+        "Recall@5": 100.0,
+        "mAP": 98.0,
+        "mean_pos_sim": 0.8868307209014893,
+        "min_pos_sim": 0.7791268825531006
+      },
+      "Sage_Mint_Teal": {
+        "count": 25,
+        "Recall@1": 96.0,
+        "Recall@5": 100.0,
+        "mAP": 98.0,
+        "mean_pos_sim": 0.8765816116333007,
+        "min_pos_sim": 0.7245699167251587
+      }
+    },
+    "per_query_results": [
+      {
+        "query_idx": 0,
+        "source_id": "deeplure_006",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9506333470344543,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 1,
+        "source_id": "deeplure_006",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9391885995864868,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 2,
+        "source_id": "deeplure_006",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9804385900497437,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 3,
+        "source_id": "deeplure_008",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9123876094818115,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 4,
+        "source_id": "deeplure_008",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9334273338317871,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 5,
+        "source_id": "deeplure_008",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9503793716430664,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 6,
+        "source_id": "deeplure_009",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.7997167110443115,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 7,
+        "source_id": "deeplure_009",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8586831092834473,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 8,
+        "source_id": "deeplure_009",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8480916023254395,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 9,
+        "source_id": "deeplure_014",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9267455339431763,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 10,
+        "source_id": "deeplure_014",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9716371893882751,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 11,
+        "source_id": "deeplure_014",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.949878990650177,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 12,
+        "source_id": "deeplure_035",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8192286491394043,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 13,
+        "source_id": "deeplure_035",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8729478716850281,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 14,
+        "source_id": "deeplure_035",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8482654690742493,
+        "rank": 2,
+        "top1_match": false,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 15,
+        "source_id": "deeplure_036",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9174152612686157,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 16,
+        "source_id": "deeplure_036",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9321038722991943,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 17,
+        "source_id": "deeplure_036",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9462894797325134,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 18,
+        "source_id": "deeplure_044",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.899526834487915,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 19,
+        "source_id": "deeplure_044",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.818206787109375,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 20,
+        "source_id": "deeplure_044",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8716565370559692,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 21,
+        "source_id": "deeplure_047",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9415695667266846,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 22,
+        "source_id": "deeplure_047",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9552571177482605,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 23,
+        "source_id": "deeplure_047",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9546446800231934,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 24,
+        "source_id": "deeplure_050",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.7867571711540222,
+        "rank": 2,
+        "top1_match": false,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 25,
+        "source_id": "deeplure_050",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.7791268825531006,
+        "rank": 2,
+        "top1_match": false,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 26,
+        "source_id": "deeplure_050",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.7849187850952148,
+        "rank": 2,
+        "top1_match": false,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 27,
+        "source_id": "deeplure_054",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.7758193016052246,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 28,
+        "source_id": "deeplure_054",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8254851698875427,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 29,
+        "source_id": "deeplure_054",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8730654120445251,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 30,
+        "source_id": "deeplure_071",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8741633296012878,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 31,
+        "source_id": "deeplure_071",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8396623730659485,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 32,
+        "source_id": "deeplure_071",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8981403708457947,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 33,
+        "source_id": "deeplure_078",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.7245699167251587,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 34,
+        "source_id": "deeplure_078",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.782126784324646,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 35,
+        "source_id": "deeplure_078",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8787635564804077,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 36,
+        "source_id": "deeplure_081",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9309355020523071,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 37,
+        "source_id": "deeplure_081",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9161778688430786,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 38,
+        "source_id": "deeplure_081",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9511493444442749,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 39,
+        "source_id": "deeplure_084",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8553287386894226,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 40,
+        "source_id": "deeplure_084",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8354948163032532,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 41,
+        "source_id": "deeplure_084",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.7825520634651184,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 42,
+        "source_id": "deeplure_090",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8952988386154175,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 43,
+        "source_id": "deeplure_090",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9255713820457458,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 44,
+        "source_id": "deeplure_090",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9652900695800781,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 45,
+        "source_id": "deeplure_092",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9305954575538635,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 46,
+        "source_id": "deeplure_092",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8666992783546448,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 47,
+        "source_id": "deeplure_092",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8870181441307068,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 48,
+        "source_id": "deeplure_111",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.910988450050354,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 49,
+        "source_id": "deeplure_111",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9211217761039734,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 50,
+        "source_id": "deeplure_111",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9583591818809509,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 51,
+        "source_id": "deeplure_114",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8649770021438599,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 52,
+        "source_id": "deeplure_114",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8765168190002441,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 53,
+        "source_id": "deeplure_114",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9083006381988525,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 54,
+        "source_id": "deeplure_119",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8738728165626526,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 55,
+        "source_id": "deeplure_119",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8913047313690186,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 56,
+        "source_id": "deeplure_119",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9478664994239807,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 57,
+        "source_id": "deeplure_126",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8831973671913147,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 58,
+        "source_id": "deeplure_126",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8821775317192078,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 59,
+        "source_id": "deeplure_126",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9177504777908325,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 60,
+        "source_id": "deeplure_128",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9037361741065979,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 61,
+        "source_id": "deeplure_128",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9277854561805725,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 62,
+        "source_id": "deeplure_128",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9630064964294434,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 63,
+        "source_id": "deeplure_148",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8316327929496765,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 64,
+        "source_id": "deeplure_148",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8721089363098145,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 65,
+        "source_id": "deeplure_148",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.8601266145706177,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 66,
+        "source_id": "deeplure_149",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.8481829166412354,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 67,
+        "source_id": "deeplure_149",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.8386008143424988,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 68,
+        "source_id": "deeplure_149",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9475134015083313,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 69,
+        "source_id": "deeplure_153",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9020851254463196,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 70,
+        "source_id": "deeplure_153",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9548200368881226,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 71,
+        "source_id": "deeplure_153",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9860407114028931,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 72,
+        "source_id": "deeplure_158",
+        "transform": "Sage_Mint_Teal",
+        "pos_sim": 0.9551758766174316,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 73,
+        "source_id": "deeplure_158",
+        "transform": "Royal_Indigo_Complementary",
+        "pos_sim": 0.9545354843139648,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      },
+      {
+        "query_idx": 74,
+        "source_id": "deeplure_158",
+        "transform": "Antique_Amber_Terracotta",
+        "pos_sim": 0.9604349136352539,
+        "rank": 1,
+        "top1_match": true,
+        "top5_match": true,
+        "top10_match": true
+      }
+    ]
+  }
+}
