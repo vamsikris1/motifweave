@@ -41,16 +41,16 @@ All transformations operate deterministically on RGB arrays mapped to HSV color 
 ## 4. Visual Inspection of Generated Colorways
 
 A total of 25 side-by-side comparison grids have been saved under:
-[`reports/color_augmentation_examples/`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/reports/color_augmentation_examples/)
+[`reports/color_augmentation_examples/`](reports/color_augmentation_examples/)
 
 Each grid displays:
 `ORIGINAL | COLOR VARIANT 1 | COLOR VARIANT 2 | COLOR VARIANT 3`
 
-- [`example_01_deeplure_001.jpg`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/reports/color_augmentation_examples/example_01_deeplure_001.jpg)
-- [`example_02_deeplure_002.jpg`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/reports/color_augmentation_examples/example_02_deeplure_002.jpg)
-- [`example_03_deeplure_003.jpg`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/reports/color_augmentation_examples/example_03_deeplure_003.jpg)
-- [`example_04_deeplure_004.jpg`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/reports/color_augmentation_examples/example_04_deeplure_004.jpg)
-- [`example_05_deeplure_005.jpg`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/reports/color_augmentation_examples/example_05_deeplure_005.jpg)
+- [`example_01_deeplure_001.jpg`](reports/color_augmentation_examples/example_01_deeplure_001.jpg)
+- [`example_02_deeplure_002.jpg`](reports/color_augmentation_examples/example_02_deeplure_002.jpg)
+- [`example_03_deeplure_003.jpg`](reports/color_augmentation_examples/example_03_deeplure_003.jpg)
+- [`example_04_deeplure_004.jpg`](reports/color_augmentation_examples/example_04_deeplure_004.jpg)
+- [`example_05_deeplure_005.jpg`](reports/color_augmentation_examples/example_05_deeplure_005.jpg)
 *(... through `example_25_deeplure_025.jpg`)*
 
 Inspection validates that the transformation preserves spatial image structure and motif locations while modifying chromatic appearance.

@@ -21,7 +21,7 @@ To rigorously assess whether **Experiment B (Color-Invariant Model)** provides g
 
 ## 2. Audit of the Colorway Generation Protocol
 
-Inspection of [`scripts/create_color_variants.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/create_color_variants.py) reveals the following technical specifications:
+Inspection of [`scripts/create_color_variants.py`](scripts/create_color_variants.py) reveals the following technical specifications:
 
 1. **Color Space Used:** HSV (Hue in $[0, 1]$, Saturation in $[0, 1]$, Value in $[0, 1]$).
 2. **LAB Transformations:** None. All chromatic rotations and scaling occur in HSV before round-tripping to standard RGB uint8.
@@ -47,7 +47,7 @@ Inspection of [`scripts/create_color_variants.py`](file:///C:/Users/PandraVamsi/
 
 ## 3. Unseen-Colorway Validation Benchmark Design
 
-To test generalization beyond the fixed $+120^\circ, +240^\circ, +50.4^\circ$ rotations, 3 **new, non-overlapping** colorways were generated across the **same 25 validation source images** via [`scripts/create_unseen_val_colorways.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/create_unseen_val_colorways.py):
+To test generalization beyond the fixed $+120^\circ, +240^\circ, +50.4^\circ$ rotations, 3 **new, non-overlapping** colorways were generated across the **same 25 validation source images** via [`scripts/create_unseen_val_colorways.py`](scripts/create_unseen_val_colorways.py):
 
 | Variant Name | Hue Angle Shift | Saturation Scale | Brightness / Value Curve | Visual / Textile Rationale |
 | :--- | :---: | :---: | :---: | :--- |
@@ -58,8 +58,8 @@ To test generalization beyond the fixed $+120^\circ, +240^\circ, +50.4^\circ$ ro
 - **Gallery:** 25 original validation source images (`variant_type == 'original'`).
 - **Queries:** 75 unseen synthetic colorway variants (3 per source).
 - **Ground Truth:** $\text{query.source\_id} == \text{gallery.source\_id}$.
-- **Manifest:** [`data/processed/unseen_val_manifest.csv`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/data/processed/unseen_val_manifest.csv)
-- **Visual Validation Grids:** 25 four-panel comparison images persisted to [`reports/unseen_colorway_examples/`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/reports/unseen_colorway_examples).
+- **Manifest:** [`data/processed/unseen_val_manifest.csv`](data/processed/unseen_val_manifest.csv)
+- **Visual Validation Grids:** 25 four-panel comparison images persisted to [`reports/unseen_colorway_examples/`](reports/unseen_colorway_examples).
 
 ---
 

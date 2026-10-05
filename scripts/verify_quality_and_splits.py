@@ -9,8 +9,8 @@ def run_final_data_quality_check():
     print("RUNNING FINAL DATA QUALITY & LEAKAGE AUDIT")
     print("=" * 60)
     
-    manifest_path = Path(r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\processed\manifest.csv")
-    raw_dir = Path(r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\raw\deeplure_corpus\sarees_dataset\handloom_sarees")
+    manifest_path = Path(r"\data\processed\manifest.csv")
+    raw_dir = Path(r"\data\raw\deeplure_corpus\sarees_dataset\handloom_sarees")
     
     assert manifest_path.exists(), f"Manifest missing at {manifest_path}"
     df = pd.read_csv(manifest_path)
@@ -81,7 +81,7 @@ def run_final_data_quality_check():
     
     # 7. Check .gitignore to ensure no proprietary data is committed to public repository
     print("7. Verifying repository data isolation (.gitignore):")
-    gitignore_path = Path(r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\.gitignore")
+    gitignore_path = Path(r"\.gitignore")
     if not gitignore_path.exists():
         with open(gitignore_path, 'w') as gf:
             gf.write("data/\n*.jpg\n*.png\noutputs/checkpoints/\noutputs/embeddings/\n*.zip\n")

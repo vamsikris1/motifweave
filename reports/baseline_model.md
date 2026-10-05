@@ -45,14 +45,14 @@ $$\text{Image } (B, 3, 224, 224) \longrightarrow \text{Backbone} \longrightarrow
 ## 3. Metric Learning Loss & Sampling
 
 ### Objective: Supervised Contrastive Loss (SupCon)
-Implemented in [`src/losses.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/src/losses.py) with temperature $\tau = 0.07$:
+Implemented in [`src/losses.py`](src/losses.py) with temperature $\tau = 0.07$:
 $$\mathcal{L}_{\text{SupCon}} = \sum_{i \in I} \frac{-1}{|P(i)|} \sum_{p \in P(i)} \log \frac{\exp(\mathbf{z}_i \cdot \mathbf{z}_p / \tau)}{\sum_{a \in A(i)} \exp(\mathbf{z}_i \cdot \mathbf{z}_a / \tau)}$$
 - **Positive Relationship:** Same `source_id` (controlled synthetic colorway variants derived from the same source image).
 - **Negative Relationship:** Different `source_id` (synthetic/source-distinct negatives).
 - **Self-Contrast Exclusion:** Trivial self-matches ($i = p$) are strictly masked out.
 
 ### Sampler: Source-Aware Batch Sampler ($P \times K$)
-Implemented in [`src/samplers.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/src/samplers.py):
+Implemented in [`src/samplers.py`](src/samplers.py):
 - $P = 8$ distinct sources per batch.
 - $K = 4$ variants per source per batch.
 - **Batch Size:** $8 \times 4 = 32$ samples.
@@ -96,17 +96,17 @@ Evaluated across the 100 images in the Validation split:
 - **Mean Same-Source Cosine Similarity:** $0.8783 \pm 0.0592$
 - **Mean Source-Distinct Cosine Similarity:** $0.2996 \pm 0.2214$
 - **Net Similarity Separation:** **$+0.5787$**
-- **2D PCA Visualization:** Generated and persisted to [`outputs/figures/baseline_val_pca.png`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/figures/baseline_val_pca.png).
+- **2D PCA Visualization:** Generated and persisted to [`outputs/figures/baseline_val_pca.png`](outputs/figures/baseline_val_pca.png).
 
 ---
 
 ## 7. Artifacts & Deliverables Generated
 
-1. Model Implementation: [`src/model.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/src/model.py)
-2. Loss Implementation: [`src/losses.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/src/losses.py)
-3. Sampler Implementation: [`src/samplers.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/src/samplers.py)
-4. Configuration: [`configs/baseline.yaml`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/configs/baseline.yaml)
-5. Training Pipeline: [`scripts/train.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/train.py)
-6. Checkpoint: [`outputs/checkpoints/baseline_best.pth`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/checkpoints/baseline_best.pth)
-7. Training History: [`outputs/metrics/baseline_history.json`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/metrics/baseline_history.json)
-8. Visual Embedding Plot: [`outputs/figures/baseline_val_pca.png`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/figures/baseline_val_pca.png)
+1. Model Implementation: [`src/model.py`](src/model.py)
+2. Loss Implementation: [`src/losses.py`](src/losses.py)
+3. Sampler Implementation: [`src/samplers.py`](src/samplers.py)
+4. Configuration: [`configs/baseline.yaml`](configs/baseline.yaml)
+5. Training Pipeline: [`scripts/train.py`](scripts/train.py)
+6. Checkpoint: [`outputs/checkpoints/baseline_best.pth`](outputs/checkpoints/baseline_best.pth)
+7. Training History: [`outputs/metrics/baseline_history.json`](outputs/metrics/baseline_history.json)
+8. Visual Embedding Plot: [`outputs/figures/baseline_val_pca.png`](outputs/figures/baseline_val_pca.png)

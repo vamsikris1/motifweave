@@ -46,6 +46,6 @@ def prepare_base_manifest(raw_dir, output_manifest_path):
     return df
 
 if __name__ == '__main__':
-    raw_path = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\raw\deeplure_corpus\sarees_dataset\handloom_sarees"
-    out_manifest = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\processed\base_manifest.csv"
+    raw_path = r"\data\raw\deeplure_corpus\sarees_dataset\handloom_sarees"
+    out_manifest = r"\data\processed\base_manifest.csv"
     prepare_base_manifest(raw_path, out_manifest)

@@ -9,7 +9,7 @@
   },
   "selection_decision": {
     "selected_final_model": "Experiment A (ConvNeXt-Tiny Baseline)",
-    "checkpoint_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\outputs\\checkpoints\\baseline_best.pth",
+    "checkpoint_path": "outputs\\checkpoints\\baseline_best.pth",
     "rationale": "Superior validation cosine margin (+0.5787 vs +0.5555), higher initial validation Recall@1 (94.67% vs 92.00%), identical unseen-colorway retrieval (94.67% R@1, 97.33% mAP), and lower source-distinct negative cross-similarity."
   },
   "validation_threshold_calibration": {
@@ -240,68 +240,68 @@
     "sample_top_k_records": [
       {
         "query_source": "deeplure_151",
-        "query_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_90832.jpg",
+        "query_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_90832.jpg",
         "top1_source": "deeplure_141",
         "top1_sim": 0.5810710787773132,
-        "top1_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_845893.jpg",
+        "top1_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_845893.jpg",
         "top2_source": "deeplure_072",
         "top2_sim": 0.5696184039115906,
-        "top2_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_475851.jpg",
+        "top2_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_475851.jpg",
         "top3_source": "deeplure_160",
         "top3_sim": 0.5564440488815308,
-        "top3_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_966256.jpg"
+        "top3_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_966256.jpg"
       },
       {
         "query_source": "deeplure_051",
-        "query_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_366604.jpg",
+        "query_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_366604.jpg",
         "top1_source": "deeplure_156",
         "top1_sim": 0.701235294342041,
-        "top1_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_94825.jpg",
+        "top1_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_94825.jpg",
         "top2_source": "deeplure_060",
         "top2_sim": 0.6387711763381958,
-        "top2_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_403289.jpg",
+        "top2_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_403289.jpg",
         "top3_source": "deeplure_073",
         "top3_sim": 0.630530595779419,
-        "top3_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_477984.jpg"
+        "top3_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_477984.jpg"
       },
       {
         "query_source": "deeplure_152",
-        "query_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_915919.jpg",
+        "query_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_915919.jpg",
         "top1_source": "deeplure_059",
         "top1_sim": 0.7581100463867188,
-        "top1_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_40145.jpg",
+        "top1_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_40145.jpg",
         "top2_source": "deeplure_122",
         "top2_sim": 0.6359899640083313,
-        "top2_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_7150.jpg",
+        "top2_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_7150.jpg",
         "top3_source": "deeplure_144",
         "top3_sim": 0.5721304416656494,
-        "top3_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_874118.jpg"
+        "top3_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_874118.jpg"
       },
       {
         "query_source": "deeplure_117",
-        "query_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_678193.jpg",
+        "query_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_678193.jpg",
         "top1_source": "deeplure_137",
         "top1_sim": 0.8642066717147827,
-        "top1_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_82256.jpg",
+        "top1_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_82256.jpg",
         "top2_source": "deeplure_130",
         "top2_sim": 0.48717790842056274,
-        "top2_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_764354.jpg",
+        "top2_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_764354.jpg",
         "top3_source": "deeplure_073",
         "top3_sim": 0.46574437618255615,
-        "top3_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_477984.jpg"
+        "top3_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_477984.jpg"
       },
       {
         "query_source": "deeplure_100",
-        "query_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_61951.jpg",
+        "query_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_61951.jpg",
         "top1_source": "deeplure_107",
         "top1_sim": 0.9422041177749634,
-        "top1_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_642784.jpg",
+        "top1_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_642784.jpg",
         "top2_source": "deeplure_144",
         "top2_sim": 0.5363699197769165,
-        "top2_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_874118.jpg",
+        "top2_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_874118.jpg",
         "top3_source": "deeplure_152",
         "top3_sim": 0.5059213638305664,
-        "top3_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_915919.jpg"
+        "top3_path": "data\\raw\\deeplure_corpus\\sarees_dataset\\handloom_sarees\\img_915919.jpg"
       }
     ]
   },
@@ -319,7 +319,7 @@
     "processor": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel"
   },
   "post_selection_experiment_b_comparison": {
-    "checkpoint_path": "C:\\Users\\PandraVamsi\\.gemini\\antigravity\\scratch\\deep-lure-motifweave\\outputs\\checkpoints\\color_invariant_best.pth",
+    "checkpoint_path": "outputs\\checkpoints\\color_invariant_best.pth",
     "validation_threshold_calibration": {
       "theta_eer": 0.7798532354903269,
       "val_eer": 0.0321875,

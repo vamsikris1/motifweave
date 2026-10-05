@@ -22,7 +22,7 @@ The goal of Experiment B is to introduce an active color-invariant inductive bia
 
 ## 2. Baseline Implementation Verification (Sanity Check on Experiment A)
 
-Prior to initiating Experiment B, an automated programmatic verification of the Experiment A implementation was executed via [`scripts/verify_baseline_implementation.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/verify_baseline_implementation.py):
+Prior to initiating Experiment B, an automated programmatic verification of the Experiment A implementation was executed via [`scripts/verify_baseline_implementation.py`](scripts/verify_baseline_implementation.py):
 
 | Verification Criterion | Expected State | Verified State | Status |
 | :--- | :--- | :--- | :---: |
@@ -162,9 +162,9 @@ Both models achieve **100.00% top-5 retrieval**, demonstrating that neither mode
 
 ## 9. Model Artifacts & Deliverables
 
-1. **Experiment B Best Checkpoint:** [`outputs/checkpoints/color_invariant_best.pth`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/checkpoints/color_invariant_best.pth)
-2. **Experiment B Last Checkpoint:** [`outputs/checkpoints/color_invariant_last.pth`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/checkpoints/color_invariant_last.pth)
-3. **Training History Metrics:** [`outputs/metrics/color_invariant_history.json`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/metrics/color_invariant_history.json)
-4. **Validation Embeddings PCA Figure:** [`outputs/figures/color_invariant_val_pca.png`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/figures/color_invariant_val_pca.png)
-5. **Baseline Best Checkpoint:** [`outputs/checkpoints/baseline_best.pth`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/checkpoints/baseline_best.pth)
-6. **Baseline Validation Embeddings PCA Figure:** [`outputs/figures/baseline_val_pca.png`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/figures/baseline_val_pca.png)
+1. **Experiment B Best Checkpoint:** [`outputs/checkpoints/color_invariant_best.pth`](outputs/checkpoints/color_invariant_best.pth)
+2. **Experiment B Last Checkpoint:** [`outputs/checkpoints/color_invariant_last.pth`](outputs/checkpoints/color_invariant_last.pth)
+3. **Training History Metrics:** [`outputs/metrics/color_invariant_history.json`](outputs/metrics/color_invariant_history.json)
+4. **Validation Embeddings PCA Figure:** [`outputs/figures/color_invariant_val_pca.png`](outputs/figures/color_invariant_val_pca.png)
+5. **Baseline Best Checkpoint:** [`outputs/checkpoints/baseline_best.pth`](outputs/checkpoints/baseline_best.pth)
+6. **Baseline Validation Embeddings PCA Figure:** [`outputs/figures/baseline_val_pca.png`](outputs/figures/baseline_val_pca.png)

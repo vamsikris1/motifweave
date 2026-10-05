@@ -148,7 +148,7 @@ The 40 independent original test photographs were evaluated in a self-retrieval 
 3. **Isolated Visual Pattern ($\text{Sim} < 0.60$):**  
    `deeplure_151` (`h_img_90832.jpg`) matches its nearest neighbor with only $\text{Sim} = 0.5811$, reflecting an isolated geometric layout that shares minimal visual feature overlap with other items in the test gallery.
 
-The complete 5-query qualitative grid is saved to [`outputs/final/figures/track_b_qualitative_grid.png`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/final/figures/track_b_qualitative_grid.png).
+The complete 5-query qualitative grid is saved to [`outputs/final/figures/track_b_qualitative_grid.png`](outputs/final/figures/track_b_qualitative_grid.png).
 
 ---
 
@@ -183,10 +183,10 @@ Measured over 50 inference iterations on CPU with batch size 1:
 ## 9. Reproducibility Statement
 
 All code, configurations, and split definitions are fully reproducible:
-- **Deterministic Split:** `seed = 42` ([`scripts/create_splits.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/create_splits.py))
-- **Model Checkpoint:** [`outputs/checkpoints/baseline_best.pth`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/checkpoints/baseline_best.pth)
-- **Evaluation Script:** [`scripts/evaluate_final_test.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/evaluate_final_test.py)
-- **Final Metrics JSON:** [`outputs/final/metrics/final_test_metrics.json`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/final/metrics/final_test_metrics.json)
+- **Deterministic Split:** `seed = 42` ([`scripts/create_splits.py`](scripts/create_splits.py))
+- **Model Checkpoint:** [`outputs/checkpoints/baseline_best.pth`](outputs/checkpoints/baseline_best.pth)
+- **Evaluation Script:** [`scripts/evaluate_final_test.py`](scripts/evaluate_final_test.py)
+- **Final Metrics JSON:** [`outputs/final/metrics/final_test_metrics.json`](outputs/final/metrics/final_test_metrics.json)
 
 ---
 

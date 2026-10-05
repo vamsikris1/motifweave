@@ -67,6 +67,6 @@ def create_deterministic_splits(base_manifest_path, splits_dir, seed=42):
     return df, train_sources, val_sources, test_sources
 
 if __name__ == '__main__':
-    base_manifest = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\processed\base_manifest.csv"
-    splits_output = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\processed\splits"
+    base_manifest = r"\data\processed\base_manifest.csv"
+    splits_output = r"\data\processed\splits"
     create_deterministic_splits(base_manifest, splits_output, seed=42)

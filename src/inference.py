@@ -73,7 +73,12 @@ def embed_image(image_input: Union[str, Path, Image.Image, torch.Tensor],
     if isinstance(image_input, (str, Path)):
         image_path = Path(image_input)
         if not image_path.exists():
-            raise FileNotFoundError(f"Image not found at: {image_path}")
+            clean_str = str(image_input).lstrip('\\/')
+            alt_path = PROJECT_ROOT / clean_str
+            if alt_path.exists():
+                image_path = alt_path
+            else:
+                raise FileNotFoundError(f"Image not found at: {image_path}")
         with Image.open(image_path) as img:
             img_rgb = img.convert('RGB')
             tensor = transform(img_rgb).unsqueeze(0).to(device)
@@ -119,7 +124,13 @@ def embed_images(image_inputs: List[Union[str, Path, Image.Image]],
             batch_tensors = []
             for item in batch:
                 if isinstance(item, (str, Path)):
-                    with Image.open(item) as img:
+                    item_path = Path(item)
+                    if not item_path.exists():
+                        clean_str = str(item).lstrip('\\/')
+                        alt_path = PROJECT_ROOT / clean_str
+                        if alt_path.exists():
+                            item_path = alt_path
+                    with Image.open(item_path) as img:
                         batch_tensors.append(transform(img.convert('RGB')))
                 elif isinstance(item, Image.Image):
                     batch_tensors.append(transform(item.convert('RGB')))

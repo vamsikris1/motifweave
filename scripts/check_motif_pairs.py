@@ -38,5 +38,5 @@ def analyze_structural_similarity(img_dir):
         print(f"  Corr = {corr:0.4f}: {f1} <---> {f2}")
 
 if __name__ == '__main__':
-    data_path = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\raw\deeplure_corpus\sarees_dataset\handloom_sarees"
+    data_path = r"\data\raw\deeplure_corpus\sarees_dataset\handloom_sarees"
     analyze_structural_similarity(data_path)

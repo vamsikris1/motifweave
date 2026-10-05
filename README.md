@@ -34,8 +34,7 @@ MotifWeave uses a lightweight metric-learning architecture with 98.14% frozen pa
 **Parameter Breakdown:**
 - Total Parameters: 28,344,673
 - Trainable Parameters: 526,081 (1.86%)
-- Frozen Parameters: 27,818,592 (98.14%)
-- Checkpoint: [`outputs/checkpoints/baseline_best.pth`](outputs/checkpoints/baseline_best.pth) (~112.2 MB)
+- Checkpoint Artifact: `baseline_best.pth` (~112.2 MB; excluded from public repository under `.gitignore` in compliance with DeepLure data privacy governance)
 
 ### Training Method & Objective
 - **Loss Objective:** Supervised Contrastive Loss (SupCon) with temperature $\tau = 0.07$.
@@ -187,6 +186,9 @@ Open [http://127.0.0.1:5050](http://127.0.0.1:5050) in any web browser.
 
 - **Official Technical Submission Notebook:** [`MotifWeave_Submission.ipynb`](MotifWeave_Submission.ipynb)
 - **Baseline Configuration:** [`configs/baseline.yaml`](configs/baseline.yaml)
-- **Winning Model Checkpoint:** [`outputs/checkpoints/baseline_best.pth`](outputs/checkpoints/baseline_best.pth)
-- **40-Source Reference Gallery:** [`outputs/final/galleries/test_gallery.npz`](outputs/final/galleries/test_gallery.npz)
-- **Test Metrics Record:** [`outputs/final/metrics/final_test_metrics.json`](outputs/final/metrics/final_test_metrics.json)
+- **Color-Invariant Configuration:** [`configs/color_invariant.yaml`](configs/color_invariant.yaml)
+- **Authoritative Test Metrics:** [`outputs/final/metrics/final_test_metrics.json`](outputs/final/metrics/final_test_metrics.json)
+- **Phase Reports:** Full architectural reports in [`reports/`](reports/)
+
+> **Data Governance & Checkpoint Notice:**  
+> In compliance with DeepLure confidential data governance, raw image files (`data/raw/`), synthetic variants (`data/processed/`), pre-computed galleries (`outputs/final/galleries/*.npz`), and trained PyTorch checkpoints (`outputs/checkpoints/baseline_best.pth`) are strictly excluded from this public repository via `.gitignore` because they reflect proprietary textile assets. Checkpoint evaluation metrics and verification statistics are preserved programmatically in [`outputs/final/metrics/final_test_metrics.json`](outputs/final/metrics/final_test_metrics.json) and demonstrated in [`MotifWeave_Submission.ipynb`](MotifWeave_Submission.ipynb). Authorized parties can reproduce checkpoints by running `scripts/train.py` on authorized datasets.

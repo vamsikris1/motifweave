@@ -128,11 +128,11 @@ def analyze_duplicates_and_clusters(df):
     return exact_dups, near_dups
 
 if __name__ == '__main__':
-    data_path = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\raw\deeplure_corpus\sarees_dataset"
+    data_path = r"\data\raw\deeplure_corpus\sarees_dataset"
     df = audit_directory(data_path)
     
     # Save manifest
-    output_dir = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\reports"
+    output_dir = r"\reports"
     os.makedirs(output_dir, exist_ok=True)
     manifest_path = os.path.join(output_dir, "deeplure_manifest.csv")
     df.to_csv(manifest_path, index=False)

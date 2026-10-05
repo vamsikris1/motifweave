@@ -53,7 +53,7 @@
 
 ## 3. Manifest Schema & Architecture
 
-The manifest is located at [`data/processed/manifest.csv`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/data/processed/manifest.csv) and [`reports/manifest.csv`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/reports/manifest.csv).
+The manifest is located at [`data/processed/manifest.csv`](data/processed/manifest.csv) and [`reports/manifest.csv`](reports/manifest.csv).
 
 | Column Name | Data Type | Description |
 | :--- | :--- | :--- |

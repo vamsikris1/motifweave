@@ -24,18 +24,18 @@ $$\text{Query Image} \xrightarrow{\text{Resize (224, 224) + Norm}} \text{ConvNeX
 
 | File | Purpose | Key Functions / Classes |
 | :--- | :--- | :--- |
-| [`src/inference.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/src/inference.py) | Standalone embedding extraction | `load_model()`, `embed_image()`, `embed_images()`, `get_inference_transform()` |
-| [`src/retrieval.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/src/retrieval.py) | Gallery search and pairwise verification | `build_gallery()`, `load_gallery()`, `retrieve()`, `verify_pair()` |
-| [`scripts/build_gallery.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/build_gallery.py) | CLI to construct and serialize reference gallery | Arguments: `--manifest`, `--split`, `--variant-type`, `--output` |
-| [`scripts/query_gallery.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/query_gallery.py) | CLI to query gallery for Top-K candidates | Arguments: `--query`, `--gallery`, `--top-k`, `--checkpoint` |
-| [`scripts/verify_pair.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/verify_pair.py) | CLI for pairwise design verification | Arguments: `--image-a`, `--image-b`, `--threshold`, `--checkpoint` |
-| [`scripts/test_inference_pipeline.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/test_inference_pipeline.py) | Automated sanity and regression test suite | Verifies 9 essential pipeline invariance properties |
+| [`src/inference.py`](src/inference.py) | Standalone embedding extraction | `load_model()`, `embed_image()`, `embed_images()`, `get_inference_transform()` |
+| [`src/retrieval.py`](src/retrieval.py) | Gallery search and pairwise verification | `build_gallery()`, `load_gallery()`, `retrieve()`, `verify_pair()` |
+| [`scripts/build_gallery.py`](scripts/build_gallery.py) | CLI to construct and serialize reference gallery | Arguments: `--manifest`, `--split`, `--variant-type`, `--output` |
+| [`scripts/query_gallery.py`](scripts/query_gallery.py) | CLI to query gallery for Top-K candidates | Arguments: `--query`, `--gallery`, `--top-k`, `--checkpoint` |
+| [`scripts/verify_pair.py`](scripts/verify_pair.py) | CLI for pairwise design verification | Arguments: `--image-a`, `--image-b`, `--threshold`, `--checkpoint` |
+| [`scripts/test_inference_pipeline.py`](scripts/test_inference_pipeline.py) | Automated sanity and regression test suite | Verifies 9 essential pipeline invariance properties |
 
 ---
 
 ## 3. Specifications & Preprocessing
 
-- **Selected Final Checkpoint:** [`outputs/checkpoints/baseline_best.pth`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/outputs/checkpoints/baseline_best.pth) (117,662,491 bytes)
+- **Selected Final Checkpoint:** [`outputs/checkpoints/baseline_best.pth`](outputs/checkpoints/baseline_best.pth) (117,662,491 bytes)
 - **Architecture:** ConvNeXt-Tiny (`IMAGENET1K_V1`, frozen) $\to$ GeM Pooling ($p=2.9839$) $\to$ Linear(768 $\to$ 512) $\to$ LayerNorm $\to$ GELU $\to$ Dropout(0.1) $\to$ Linear(512 $\to$ 256) $\to$ $L_2$ Normalization.
 - **Embedding Format:** Unit-normalized float32 vector, shape `(256,)` ($\|\mathbf{z}\|_2 = 1.000000 \pm 0.000001$).
 - **Image Preprocessing:**
@@ -50,7 +50,7 @@ $$\text{Query Image} \xrightarrow{\text{Resize (224, 224) + Norm}} \text{ConvNeX
 
 ## 4. Verification & Sanity-Check Results
 
-Execution of [`scripts/test_inference_pipeline.py`](file:///C:/Users/PandraVamsi/.gemini/antigravity/scratch/deep-lure-motifweave/scripts/test_inference_pipeline.py) verified:
+Execution of [`scripts/test_inference_pipeline.py`](scripts/test_inference_pipeline.py) verified:
 
 1. **Model Loading:** Clean loading in `eval()` mode with all 28.3M parameters set to `requires_grad=False`.
 2. **Embedding Shape & Norm:** Extracted embeddings have exact shape `(256,)` and L2 norm `1.000000`.

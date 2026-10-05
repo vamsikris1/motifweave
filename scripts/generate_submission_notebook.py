@@ -133,7 +133,7 @@ print("=" * 70)
 print("MOTIFWEAVE RUNTIME ENVIRONMENT VERIFICATION")
 print("=" * 70)
 print(f"Operating System:     {platform.system()} {platform.release()} ({platform.architecture()[0]})")
-print(f"Python Executable:    {sys.executable}")
+print(f"Python Runtime:       Python {platform.python_version()} ({platform.system()} {platform.architecture()[0]})")
 print(f"Python Version:       {platform.python_version()}")
 print(f"PyTorch Version:      {torch.__version__}")
 print(f"Torchvision Version:  {torchvision.__version__}")
@@ -335,10 +335,10 @@ The inference pipeline maps any input saree image (RGB PIL Image or file path) t
 5. Exact $L_2$ normalization: $z = \\frac{v}{\\|v\\|_2}$.
 """)
 
-    # Code cell 4: Test inference functions
     code_inference = '''import sys
 from pathlib import Path
 import numpy as np
+import torch
 
 PROJECT_ROOT = Path(".").resolve()
 sys.path.insert(0, str(PROJECT_ROOT))
@@ -374,7 +374,15 @@ The retrieval pipeline supports fast Top-$K$ retrieval against pre-indexed refer
 """)
 
     # Code cell 5: Query gallery
-    code_retrieval = '''from src.retrieval import load_gallery, retrieve
+    code_retrieval = '''import sys
+from pathlib import Path
+import torch
+from src.retrieval import load_gallery, retrieve
+from src.inference import load_model, get_inference_transform
+
+if 'model' not in globals() or model is None:
+    model, config, device = load_model("outputs/checkpoints/baseline_best.pth", device=torch.device('cpu'))
+    transform = get_inference_transform(224)
 
 gallery = load_gallery("outputs/final/galleries/test_gallery.npz")
 print(f"Loaded Reference Gallery: {gallery['num_items']} images (Index dimension: {gallery['embeddings'].shape})")
@@ -410,7 +418,15 @@ The decision threshold was calibrated **strictly on the 25-source Validation spl
 """)
 
     # Code cell 6: Verify pairs
-    code_verify = '''from src.retrieval import verify_pair
+    code_verify = '''import sys
+from pathlib import Path
+import torch
+from src.retrieval import verify_pair
+from src.inference import load_model, get_inference_transform
+
+if 'model' not in globals() or model is None:
+    model, config, device = load_model("outputs/checkpoints/baseline_best.pth", device=torch.device('cpu'))
+    transform = get_inference_transform(224)
 
 img_source = "data/raw/deeplure_corpus/sarees_dataset/handloom_sarees/h_img_149526.jpg"
 img_color_variant = "data/processed/variants/deeplure_002_variant1.jpg"

@@ -236,11 +236,11 @@ def process_and_generate_variants(base_manifest_path, variants_dir, examples_dir
     final_df.to_csv(final_manifest_path, index=False)
     
     # Also save to reports directory for convenient reference
-    reports_manifest = Path(r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\reports\manifest.csv")
+    reports_manifest = Path(r"\reports\manifest.csv")
     final_df.to_csv(reports_manifest, index=False)
     
     # Save split files
-    splits_dir = Path(r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\processed\splits")
+    splits_dir = Path(r"\data\processed\splits")
     for s_name in ['train', 'val', 'test']:
         s_df = final_df[final_df['split'] == s_name]
         s_df.to_csv(splits_dir / f"{s_name}.csv", index=False)
@@ -251,8 +251,8 @@ def process_and_generate_variants(base_manifest_path, variants_dir, examples_dir
     return final_df
 
 if __name__ == '__main__':
-    base_m = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\processed\base_manifest.csv"
-    var_d = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\processed\variants"
-    ex_d = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\reports\color_augmentation_examples"
-    fin_m = r"C:\Users\PandraVamsi\.gemini\antigravity\scratch\deep-lure-motifweave\data\processed\manifest.csv"
+    base_m = r"\data\processed\base_manifest.csv"
+    var_d = r"\data\processed\variants"
+    ex_d = r"\reports\color_augmentation_examples"
+    fin_m = r"\data\processed\manifest.csv"
     process_and_generate_variants(base_m, var_d, ex_d, fin_m)
